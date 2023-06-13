@@ -1,0 +1,45 @@
+{
+    "PolicyVersion": {
+        "Document": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": "inspector2:*",
+                    "Resource": "*"
+                },
+                {
+                    "Effect": "Allow",
+                    "Action": "codeguru-security:BatchGetFindings",
+                    "Resource": "*"
+                },
+                {
+                    "Effect": "Allow",
+                    "Action": "iam:CreateServiceLinkedRole",
+                    "Resource": "*",
+                    "Condition": {
+                        "StringEquals": {
+                            "iam:AWSServiceName": "inspector2.amazonaws.com"
+                        }
+                    }
+                },
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "organizations:EnableAWSServiceAccess",
+                        "organizations:RegisterDelegatedAdministrator",
+                        "organizations:ListDelegatedAdministrators",
+                        "organizations:ListAWSServiceAccessForOrganization",
+                        "organizations:DescribeOrganizationalUnit",
+                        "organizations:DescribeAccount",
+                        "organizations:DescribeOrganization"
+                    ],
+                    "Resource": "*"
+                }
+            ]
+        },
+        "VersionId": "v2",
+        "IsDefaultVersion": true,
+        "CreateDate": "2023-04-19T21:33:48Z"
+    }
+}
