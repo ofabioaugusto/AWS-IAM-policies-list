@@ -17,11 +17,3 @@ Um diferencial de ter esses arquivos de exemplo em um repositório do Git é a f
 * Cloud Formation
 * IAM
 * Policies
-  
-## Status
-
-Concluído
-
-## Telas
-
-**Proibida a distribuição ou revenda desse material.**
